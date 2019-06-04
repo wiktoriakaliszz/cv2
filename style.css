@@ -1,0 +1,179 @@
+
+
+
+
+@font-face {
+    font-family: 'dawning_of_a_new_dayregular';
+    src: url('font/dawningofanewday-webfont.woff2') format('woff2'),
+         url('font/dawningofanewday-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+  background-image: url(img/background.png);
+  background-repeat: repeat;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  max-width: 700px;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav article article"
+    "footer footer footer";
+  grid-template-rows: 260px 1fr;
+  grid-template-columns: 30% 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+}
+
+body>* {
+  background-color: white;
+  border-style: solid;
+  border-color: #ffc5da;
+  margin-top: 50px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+a:hover {
+  color: #ffb797;
+}
+
+a:link {
+  color: #ffc5da;
+  text-decoration: none;
+}
+
+p {
+  font-size: 15px;
+}
+
+ul {
+  font-size: 14px;
+  margin-top: -10px;
+}
+
+li {
+  list-style: none;
+  margin-left: -43px
+}
+
+li::before {
+  content: "\2022";
+  color: #ffc5da;
+}
+
+
+.infofo {
+  font-size: 13px;
+}
+
+.skillss {
+  font-size: 13px;
+  color: white;
+  text-align: center;
+}
+
+.skillss>* {
+  background-color: #ffc5da;
+  margin-top: 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.bannertjes {
+  font-size: 13px;
+  color: white;
+}
+
+.bannertjes>* {
+  background-color: #ffc5da;
+  margin-top: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+nav>* {
+  text-align: center
+
+}
+
+
+p {
+  margin-top: -10px;
+}
+
+header {
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'dawning_of_a_new_dayregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100px;
+  color: #ffc5da;
+  text-align: center;
+}
+
+h2 {
+  color: #ffc5da;
+  border-bottom: 2px solid #ffc5da;
+  font-size: 24px;
+}
+
+h3 {
+  color: #ffc5da;
+  font-size: 18px;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+h4 {
+  color: #ffc5da;
+  font-size: 15px;
+  margin-top: -5px;
+}
+
+h5 {
+  color: #ffc5da;
+  font-style: italic;
+  margin-top: -10px;
+  margin-bottom: 30px;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+}
+#pageHeader {
+  grid-area: header;
+}
+
+#pageFooter {
+  grid-area: footer;
+}
+
+#mainArticle {
+  grid-area: article;
+}
+
+#mainNav {
+  grid-area: nav;
+}
+
+@media all and (max-width: 575px) {
+  body {
+    grid-template-areas:
+      "header"
+      "nav"
+      "article"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 70px;
+    grid-template-columns: 1fr;
+  }
+}
